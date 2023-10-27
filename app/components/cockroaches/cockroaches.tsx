@@ -4,6 +4,11 @@ import song from "./la_cucaracha.mp3";
 import ReactAudioPlayer from "react-audio-player";
 
 export const Cockroaches = () => {
+  const socket = new WebSocket("ws://localhost:8000");
+  socket.addEventListener("open", () => {
+    socket.send("reset - spill ferdig");
+  });
+
   const [isHidden, setIsHidden] = useState([
     false,
     false,
@@ -97,10 +102,11 @@ export const Cockroaches = () => {
       <div className={styles.scoreContainer}>
         <div className={styles.finalScore}>
           <div className={styles.finalScore__content}>
-            Du fikk&nbsp;{score > 0 && <p> {score} </p>}&nbsp;poeng og
-            moste&nbsp;{number > 0 && <p> {number} </p>} &nbsp;kakkerlakker 🪳
+            Du fikk&nbsp;{score > 0 && <p>{score}</p>}&nbsp;poeng og moste&nbsp;
+            {number > 0 && <p>{number}</p>}&nbsp;kakkerlakker 🪳
+            <br />
             Du er nå med i trekningen om sykt fine premier. Det lønner seg å
-            komme på kontoret 😎
+            komme på kontoret.
           </div>
           <div>
             <div className={styles.highScore}>Highscore</div>

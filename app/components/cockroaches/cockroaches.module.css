@@ -8,7 +8,7 @@
 }
 
 .backgroundImage {
-  background-image: url("fremtind.png");
+  background-image: url("office.png");
   background-size: cover;
   height: 100vh;
 }
@@ -284,7 +284,6 @@
 }
 .finalScore__content {
   display: block;
-  width: 80%;
   text-align: center;
 }
 
