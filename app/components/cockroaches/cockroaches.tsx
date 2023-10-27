@@ -3,6 +3,7 @@ import styles from "./cockroaches.module.css";
 import song from "./la_cucaracha.mp3";
 import ReactAudioPlayer from "react-audio-player";
 import roach from "./roach.png";
+import hammer from "./hammer.png";
 
 export const Cockroaches = () => {
   const socket = new WebSocket("ws://localhost:8000");
@@ -177,7 +178,7 @@ export const Cockroaches = () => {
                 }
               }}
             >
-              🔨
+              <img src={hammer} />
             </button>
           </div>
         </div>

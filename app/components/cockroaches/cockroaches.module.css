@@ -318,7 +318,6 @@
 
 .hammer {
   position: relative;
-  font-size: 60px;
   z-index: 10000;
   right: 50%;
   animation: wobble 0.8s infinite both;
@@ -328,6 +327,9 @@
   border: none;
   margin: 0;
   padding: 0;
+}
+.hammer img {
+  width: 80px;
 }
 
 .scoreContainer {
