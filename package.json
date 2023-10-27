@@ -2,7 +2,6 @@
   "name": "kakkerlakkameratene",
   "private": true,
   "sideEffects": false,
-  
   "scripts": {
     "build": "remix build",
     "dev": "remix dev --manual",
@@ -13,12 +12,14 @@
   "dependencies": {
     "@fremtind/jkl-button-react": "^15.0.8",
     "@fremtind/jkl-core": "^13.3.0",
+    "@fremtind/jkl-tag-react": "^5.1.6",
     "@remix-run/css-bundle": "^2.1.0",
     "@remix-run/node": "^2.1.0",
     "@remix-run/react": "^2.1.0",
     "@remix-run/serve": "^2.1.0",
     "isbot": "^3.6.8",
     "react": "^18.2.0",
+    "react-audio-player": "^0.17.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {

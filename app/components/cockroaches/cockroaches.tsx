@@ -1,19 +1,41 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "./cockroaches.module.css";
-import fremtind from "./fremtind.png";
-
 export const Cockroaches = () => {
-  const [isHidden, setIsHidden] = useState([false, false, false, false]);
+  const [isHidden, setIsHidden] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
   const [score, setScore] = useState(0);
   const [number, setNumber] = useState(0);
   const [showCounter, setShowCounter] = useState(true);
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(3);
+  const [hideBackground, setHideBackground] = useState(false);
+
+  const buttonRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
     if (showCounter) {
       const timer = setTimeout(() => {
-        if (count < 4) {
-          setCount(count + 1);
+        if (count > 1) {
+          setCount(count - 1);
         } else {
           setShowCounter(false);
         }
@@ -43,17 +65,55 @@ export const Cockroaches = () => {
     }
   };
 
-  console.log(count);
+  useEffect(() => {
+    const handleKeyPress = (event: any) => {
+      if (event.key === "K" || event.key === "k") {
+        buttonRef.current?.click();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyPress);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyPress);
+    };
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setHideBackground(true);
+    }, 140000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
+  if (hideBackground) {
+    return (
+      <div className={styles.scoreContainer}>
+        <div className={styles.finalScore}>
+          <div className={styles.finalScore_content}>
+            Du fikk&nbsp;{score > 0 && <p> {score} </p>}&nbsp;poeng og
+            moste&nbsp;{number > 0 && <p> {number} </p>} &nbsp;kakkerlakker 🪳
+            <div>
+              Du er nå med i trekningen om sykt fine premier. Det lønner seg å
+              komme på kontoret 😎
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>
       {showCounter ? (
         <div className={styles.counter}>
-          {count < 4 ? <div>{count}</div> : <div>Start</div>}
+          {count > 0 ? <div>{count}</div> : <div>Start</div>}
         </div>
       ) : (
         <div className={styles.backgroundImage}>
-          {/* <img src={fremtind} /> */}
           <div className={styles.scoreBoard}>
             <div>Poeng:{score > 0 && <p> {score}</p>}</div>
             <div>
@@ -62,7 +122,10 @@ export const Cockroaches = () => {
           </div>
 
           <div className={styles.container}>
-            {[0, 1, 2, 3].map(
+            {[
+              0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+              19, 20,
+            ].map(
               (index) =>
                 !isHidden[index] && (
                   <span
@@ -74,12 +137,13 @@ export const Cockroaches = () => {
                 )
             )}
             <button
+              ref={buttonRef}
               className={styles.hammer}
               onClick={() => {
                 for (let index = 0; index < isHidden.length; index++) {
                   if (!isHidden[index]) {
                     handleButtonClick(index);
-                    break; // Stop after handling the first visible cockroach
+                    break;
                   }
                 }
               }}

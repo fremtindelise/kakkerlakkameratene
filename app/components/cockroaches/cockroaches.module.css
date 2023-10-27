@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap");
 .container {
   width: 100%;
   display: flex;
@@ -13,20 +14,13 @@
 }
 
 .counter {
-  font-size: 2.25rem;
-  line-height: 2.75rem;
-  font-weight: 400;
+  font-size: 300px;
+  font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-@media (min-width: 680px) {
-  .counter {
-    font-size: 3.5rem;
-    line-height: 4rem;
-    font-weight: 400;
-  }
+  font-family: "Pixelify Sans", sans-serif;
 }
 
 .scoreBoard {
@@ -36,6 +30,10 @@
   display: flex;
   justify-content: space-evenly;
   padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 10px 10px 0 0;
 }
 @media (min-width: 680px) {
   .scoreBoard {
@@ -46,10 +44,14 @@
 }
 .scoreBoard div {
   display: flex;
+  align-items: baseline;
+}
+.scoreBoard p {
+  font-family: "Pixelify Sans", sans-serif;
 }
 
 .movingCockroach1 {
-  font-size: 80px;
+  font-size: 60px;
   animation: slideRight 4s linear infinite;
   display: inline-block;
   width: auto;
@@ -58,7 +60,7 @@
 }
 
 .movingCockroach2 {
-  font-size: 80px;
+  font-size: 60px;
   animation: slideRight 5s linear infinite;
   display: inline-block;
   width: auto;
@@ -67,7 +69,7 @@
 }
 
 .movingCockroach3 {
-  font-size: 80px;
+  font-size: 60px;
   animation: slideRight 3s linear infinite;
   display: inline-block;
   width: auto;
@@ -76,8 +78,161 @@
 }
 
 .movingCockroach4 {
-  font-size: 80px;
+  font-size: 60px;
   animation: slideRight 6s linear infinite;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  animation-play-state: running;
+}
+
+.movingCockroach5 {
+  font-size: 60px;
+  animation: slideRight 4.8s linear infinite;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  animation-play-state: running;
+}
+
+.movingCockroach6 {
+  font-size: 60px;
+  animation: slideRight 8s linear infinite;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  animation-play-state: running;
+}
+
+.movingCockroach7 {
+  font-size: 60px;
+  animation: slideRight 8.5s linear infinite;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  animation-play-state: running;
+}
+
+.movingCockroach8 {
+  font-size: 60px;
+  animation: slideRight 9s linear infinite;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  animation-play-state: running;
+}
+
+.movingCockroach8 {
+  font-size: 60px;
+  animation: slideRight 3.3s linear infinite;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  animation-play-state: running;
+}
+
+.movingCockroach9 {
+  font-size: 60px;
+  animation: slideRight 5.3s linear infinite;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  animation-play-state: running;
+}
+
+.movingCockroach10 {
+  font-size: 60px;
+  animation: slideRight 4.1s linear infinite;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  animation-play-state: running;
+}
+
+.movingCockroach11 {
+  font-size: 60px;
+  animation: slideRight 7.1s linear infinite;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  animation-play-state: running;
+}
+
+.movingCockroach12 {
+  font-size: 60px;
+  animation: slideRight 10s linear infinite;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  animation-play-state: running;
+}
+
+.movingCockroach13 {
+  font-size: 60px;
+  animation: slideRight 13s linear infinite;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  animation-play-state: running;
+}
+
+.movingCockroach14 {
+  font-size: 60px;
+  animation: slideRight 6.1s linear infinite;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  animation-play-state: running;
+}
+
+.movingCockroach15 {
+  font-size: 60px;
+  animation: slideRight 5.1s linear infinite;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  animation-play-state: running;
+}
+
+.movingCockroach16 {
+  font-size: 60px;
+  animation: slideRight 5.5s linear infinite;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  animation-play-state: running;
+}
+
+.movingCockroach17 {
+  font-size: 60px;
+  animation: slideRight 9.5s linear infinite;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  animation-play-state: running;
+}
+
+.movingCockroach18 {
+  font-size: 60px;
+  animation: slideRight 2.5s linear infinite;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  animation-play-state: running;
+}
+
+.movingCockroach19 {
+  font-size: 60px;
+  animation: slideRight 6.8s linear infinite;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  animation-play-state: running;
+}
+
+.movingCockroach20 {
+  font-size: 60px;
+  animation: slideRight 7.8s linear infinite;
   display: inline-block;
   width: auto;
   cursor: pointer;
@@ -86,9 +241,42 @@
 
 .hammer {
   position: relative;
-  font-size: 20px;
+  font-size: 60px;
   z-index: 10000;
   right: 50%;
+  animation: wobble 0.8s infinite both;
+  border-radius: 0;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.scoreContainer {
+  background-color: #fdeab9;
+  height: 100vh;
+  border-radius: 5px;
+  border: 20px solid white;
+  box-sizing: border-box;
+}
+
+.finalScore {
+  display: flex;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 400;
+  align-items: center;
+}
+@media (min-width: 680px) {
+  .finalScore {
+    font-size: 2.75rem;
+    line-height: 3.25rem;
+    font-weight: 400;
+  }
+}
+.finalScore p {
+  display: inline;
 }
 
 @keyframes slideRight {
@@ -99,6 +287,34 @@
   100% {
     transform: translateX(100%);
     width: 100%;
+  }
+}
+@keyframes wobble {
+  0%, 100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+    transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+    transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+    transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+    transform: translateX(-6px) rotate(-1.2deg);
   }
 }
 

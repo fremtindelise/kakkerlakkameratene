@@ -1,17 +1,25 @@
 @use "@fremtind/jkl-core/jkl";
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap");
 
 .frontPageContainer {
   display: flex;
-  @include jkl.text-style("title");
-
+  @include jkl.text-style("title-small");
+  flex-wrap: wrap;
   height: 100vh;
   align-items: center;
   justify-content: center;
+  align-content: center;
+  border-radius: 5px;
+  border: 20px solid white;
+  background-color: #d9ddff;
+  box-sizing: border-box;
 
   &__instructions {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 80%;
+    text-align: center;
   }
 
   &__buttonContainer {
@@ -20,4 +28,29 @@
     justify-content: center;
     padding-top: #{jkl.$spacing-40};
   }
+}
+
+.gameName {
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 120px;
+  padding-bottom: #{jkl.$spacing-104};
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &__bug {
+    font-size: 70px;
+    position: sticky;
+    z-index: 1000;
+    transform: rotate(-45deg);
+    left: 70%;
+  }
+}
+
+.button {
+  border: solid 3px black;
+  border-radius: 20%;
+  padding: 20px;
+  background-color: white;
+  display: flex;
 }

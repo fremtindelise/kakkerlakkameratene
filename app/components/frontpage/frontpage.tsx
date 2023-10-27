@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Cockroaches } from "../cockroaches/cockroaches";
 import styles from "./frontpage.module.css";
 import { PrimaryButton } from "@fremtind/jkl-button-react";
+import ReactAudioPlayer from "react-audio-player";
+import play from "./play.svg";
+
 import "@fremtind/jkl-button/button.min.css";
 import "@fremtind/jkl-core/core.min.css";
 
@@ -17,13 +20,19 @@ export const FrontPage = () => {
     <>
       {showFrontPage && (
         <div className={styles.frontPageContainer}>
+          <div className={styles.gameName}>
+            La Cucaracha<span className={styles.gameName__bug}>🪳</span>
+          </div>
           <div className={styles.frontPageContainer__instructions}>
-            Trykk på knappen og mos flest mulig kakkerlakker. <br />
-            Du har 10 sekunder på deg!
+            Trykk på knappen og mos flest mulig kakkerlakker. Du har 10 sekunder
+            på deg.
             <div className={styles.frontPageContainer__buttonContainer}>
-              <PrimaryButton onClick={toggleCockroaches}>Start</PrimaryButton>
+              <button className={styles.button} onClick={toggleCockroaches}>
+                <img src={play} />
+              </button>
             </div>
           </div>
+          {/* <ReactAudioPlayer src="la_cucaracha.mp3" autoPlay controls /> */}
         </div>
       )}
 
