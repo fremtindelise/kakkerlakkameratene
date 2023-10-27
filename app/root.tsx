@@ -8,6 +8,9 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { FrontPage } from "~/components/frontpage/frontpage";
+
+import "@fremtind/jkl-core/core.min.css";
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
@@ -22,7 +25,8 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className={"jkl"}>
+        <FrontPage />
         <Outlet />
         <ScrollRestoration />
         <Scripts />

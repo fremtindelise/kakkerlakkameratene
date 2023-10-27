@@ -2,14 +2,17 @@
   "name": "kakkerlakkameratene",
   "private": true,
   "sideEffects": false,
-  "type": "module",
+  
   "scripts": {
     "build": "remix build",
     "dev": "remix dev --manual",
     "start": "remix-serve ./build/index.js",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "sass": "sass --watch app/:app/ --load-path=./node_modules"
   },
   "dependencies": {
+    "@fremtind/jkl-button-react": "^15.0.8",
+    "@fremtind/jkl-core": "^13.3.0",
     "@remix-run/css-bundle": "^2.1.0",
     "@remix-run/node": "^2.1.0",
     "@remix-run/react": "^2.1.0",

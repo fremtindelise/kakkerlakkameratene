@@ -1,0 +1,82 @@
+.container {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  height: 500px;
+}
+
+.scoreBoard {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 2.5rem;
+}
+@media (min-width: 680px) {
+  .scoreBoard {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    font-weight: 400;
+  }
+}
+.scoreBoard div {
+  display: flex;
+}
+
+.movingCockroach1 {
+  font-size: 80px;
+  animation: slideRight 4s linear infinite;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  animation-play-state: running;
+}
+
+.movingCockroach2 {
+  font-size: 80px;
+  animation: slideRight 5s linear infinite;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  animation-play-state: running;
+}
+
+.movingCockroach3 {
+  font-size: 80px;
+  animation: slideRight 3s linear infinite;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  animation-play-state: running;
+}
+
+.movingCockroach4 {
+  font-size: 80px;
+  animation: slideRight 6s linear infinite;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  animation-play-state: running;
+}
+
+.hammer {
+  position: relative;
+  font-size: 20px;
+  z-index: 10000;
+  right: 50%;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100%);
+    width: 100%;
+  }
+  100% {
+    transform: translateX(100%);
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=cockroaches.module.css.map */
