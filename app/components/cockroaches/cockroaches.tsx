@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import styles from "./cockroaches.module.css";
 import song from "./la_cucaracha.mp3";
 import ReactAudioPlayer from "react-audio-player";
+import roach from "./roach.png";
 
 export const Cockroaches = () => {
   const socket = new WebSocket("ws://localhost:8000");
@@ -90,7 +91,7 @@ export const Cockroaches = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setHideBackground(true);
-    }, 140000);
+    }, 14000);
 
     return () => {
       clearTimeout(timer);
@@ -103,7 +104,7 @@ export const Cockroaches = () => {
         <div className={styles.finalScore}>
           <div className={styles.finalScore__content}>
             Du fikk&nbsp;{score > 0 && <p>{score}</p>}&nbsp;poeng og moste&nbsp;
-            {number > 0 && <p>{number}</p>}&nbsp;kakkerlakker 🪳
+            {number > 0 && <p>{number}</p>}&nbsp;kakkerlakker.
             <br />
             Du er nå med i trekningen om sykt fine premier. Det lønner seg å
             komme på kontoret.
@@ -160,7 +161,7 @@ export const Cockroaches = () => {
                     key={index}
                     className={styles["movingCockroach" + (index + 1)]}
                   >
-                    🪳
+                    <img src={roach} />
                   </span>
                 )
             )}

@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Cockroaches } from "../cockroaches/cockroaches";
 import styles from "./frontpage.module.css";
+import { Cockroaches } from "../cockroaches/cockroaches";
 import play from "./play.svg";
+import roach from "./roach.png";
 
 import "@fremtind/jkl-button/button.min.css";
 import "@fremtind/jkl-core/core.min.css";
@@ -19,7 +20,10 @@ export const FrontPage = () => {
       {showFrontPage && (
         <div className={styles.frontPageContainer}>
           <div className={styles.gameName}>
-            La Cucaracha<span className={styles.gameName__bug}>🪳</span>
+            La Cucaracha
+            <span className={styles.gameName__bug}>
+              <img src={roach} />
+            </span>
           </div>
           <div className={styles.frontPageContainer__instructions}>
             Trykk på knappen og mos flest mulig kakkerlakker. Du har 10 sekunder

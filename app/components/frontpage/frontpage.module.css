@@ -44,11 +44,13 @@
   justify-content: center;
 }
 .gameName__bug {
-  font-size: 70px;
   position: sticky;
   z-index: 1000;
   transform: rotate(-45deg);
-  left: 70%;
+  left: 60%;
+}
+.gameName__bug img {
+  width: 70px;
 }
 
 .button {
