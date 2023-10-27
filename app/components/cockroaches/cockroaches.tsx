@@ -90,7 +90,7 @@ export const Cockroaches = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setHideBackground(true);
-    }, 14000);
+    }, 140000);
 
     return () => {
       clearTimeout(timer);
