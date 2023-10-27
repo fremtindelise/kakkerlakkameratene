@@ -6,9 +6,32 @@
   height: 500px;
 }
 
-.scoreBoard {
+.backgroundImage {
+  background-image: url("fremtind.png");
+  background-size: cover;
+  height: 100vh;
+}
+
+.counter {
   font-size: 2.25rem;
   line-height: 2.75rem;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+@media (min-width: 680px) {
+  .counter {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    font-weight: 400;
+  }
+}
+
+.scoreBoard {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
   font-weight: 400;
   display: flex;
   justify-content: space-evenly;
@@ -16,8 +39,8 @@
 }
 @media (min-width: 680px) {
   .scoreBoard {
-    font-size: 3.5rem;
-    line-height: 4rem;
+    font-size: 2.75rem;
+    line-height: 3.25rem;
     font-weight: 400;
   }
 }

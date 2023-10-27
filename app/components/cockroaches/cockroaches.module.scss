@@ -8,8 +8,22 @@
   height: 500px;
 }
 
-.scoreBoard {
+.backgroundImage {
+  background-image: url("fremtind.png");
+  background-size: cover;
+  height: 100vh;
+}
+
+.counter {
   @include jkl.text-style("title");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.scoreBoard {
+  @include jkl.text-style("title-small");
   display: flex;
   justify-content: space-evenly;
   padding-top: #{jkl.$spacing-40};
