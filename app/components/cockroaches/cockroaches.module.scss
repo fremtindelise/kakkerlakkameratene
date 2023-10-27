@@ -42,6 +42,7 @@
 
   p {
     font-family: "Pixelify Sans", sans-serif;
+    padding-left: 10px;
   }
 }
 
@@ -251,15 +252,42 @@
   border-radius: 5px;
   border: 20px solid white;
   box-sizing: border-box;
+  display: flex;
 }
 
 .finalScore {
   display: flex;
-  @include jkl.text-style("title-small");
+  flex-wrap: wrap;
+  justify-content: center;
+  @include jkl.text-style("heading-1");
   align-items: center;
 
   p {
     display: inline;
+  }
+
+  &__content {
+    display: block;
+    width: 80%;
+    text-align: center;
+  }
+}
+
+.highScore {
+  font-family: "Pixelify Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  @include jkl.text-style("body");
+
+  tr {
+    border-bottom: 1px solid black;
+  }
+
+  td {
+    padding: 10px;
   }
 }
 

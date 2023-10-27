@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import styles from "./cockroaches.module.css";
+import song from "./la_cucaracha.mp3";
+import ReactAudioPlayer from "react-audio-player";
+
 export const Cockroaches = () => {
   const [isHidden, setIsHidden] = useState([
     false,
@@ -82,7 +85,7 @@ export const Cockroaches = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setHideBackground(true);
-    }, 140000);
+    }, 14000);
 
     return () => {
       clearTimeout(timer);
@@ -93,13 +96,31 @@ export const Cockroaches = () => {
     return (
       <div className={styles.scoreContainer}>
         <div className={styles.finalScore}>
-          <div className={styles.finalScore_content}>
+          <div className={styles.finalScore__content}>
             Du fikk&nbsp;{score > 0 && <p> {score} </p>}&nbsp;poeng og
             moste&nbsp;{number > 0 && <p> {number} </p>} &nbsp;kakkerlakker 🪳
-            <div>
-              Du er nå med i trekningen om sykt fine premier. Det lønner seg å
-              komme på kontoret 😎
-            </div>
+            Du er nå med i trekningen om sykt fine premier. Det lønner seg å
+            komme på kontoret 😎
+          </div>
+          <div>
+            <div className={styles.highScore}>Highscore</div>
+            <table className={styles.table}>
+              <tr>
+                <td>01</td>
+                <td>Navn Navnesen</td>
+                <td>Score</td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>Navn Navnesen</td>
+                <td>Score</td>
+              </tr>
+              <tr>
+                <td>03</td>
+                <td>Navn Navnesen</td>
+                <td>Score</td>
+              </tr>
+            </table>
           </div>
         </div>
       </div>
@@ -114,6 +135,7 @@ export const Cockroaches = () => {
         </div>
       ) : (
         <div className={styles.backgroundImage}>
+          <ReactAudioPlayer src={song} autoPlay />
           <div className={styles.scoreBoard}>
             <div>Poeng:{score > 0 && <p> {score}</p>}</div>
             <div>

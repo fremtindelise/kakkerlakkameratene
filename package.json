@@ -12,6 +12,7 @@
   "dependencies": {
     "@fremtind/jkl-button-react": "^15.0.8",
     "@fremtind/jkl-core": "^13.3.0",
+    "@fremtind/jkl-table-react": "^11.1.19",
     "@fremtind/jkl-tag-react": "^5.1.6",
     "@remix-run/css-bundle": "^2.1.0",
     "@remix-run/node": "^2.1.0",

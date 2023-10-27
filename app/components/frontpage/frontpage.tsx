@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { Cockroaches } from "../cockroaches/cockroaches";
 import styles from "./frontpage.module.css";
-import { PrimaryButton } from "@fremtind/jkl-button-react";
-import ReactAudioPlayer from "react-audio-player";
 import play from "./play.svg";
 
 import "@fremtind/jkl-button/button.min.css";
@@ -32,7 +30,6 @@ export const FrontPage = () => {
               </button>
             </div>
           </div>
-          {/* <ReactAudioPlayer src="la_cucaracha.mp3" autoPlay controls /> */}
         </div>
       )}
 
